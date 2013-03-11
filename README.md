@@ -20,7 +20,7 @@ Start a new site
 In a terminal:
     workon cactussites
     cd ~/src (or whereever you keep your git repositories)
-    cactus create newsite.knightlab.com --skeleton=https://github.com/NUKnightLab/cactus-project-template/archive/master.zip
+    cactus create **newsite.knightlab.com** --skeleton=https://github.com/NUKnightLab/cactus-project-template/archive/master.zip
     cd newsite.knightlab.com
     cactus serve
     
@@ -39,5 +39,26 @@ In a terminal:
     cd ~/src/newsite.knightlab.com
     git add *
     git commit -m "initial"
-    git remote add origin git@github.com:NUKnightLab/newsite.knightlab.com.git
+    git remote add origin git@github.com:NUKnightLab/**newsite.knightlab.com**.git
     git push -u origin master
+
+Deploying the site to S3
+------------------------
+Cactus makes this dead simple. The first time you do it, it will ask for the Amazon access key and secret key. You can find these values in [the Access Credentials section of our AWS console](https://portal.aws.amazon.com/gp/aws/securityCredentials?#access_credentials).
+
+    $ cactus deploy
+    Plugins: version
+    Building error.html
+    Building index.html
+    Building robots.txt
+    Building sitemap.xml
+    Amazon access key (http://bit.ly/Agl7A9): 
+    Amazon secret access key (will be saved in keychain): 
+    S3 bucket name (www.yoursite.com): **newsite.knightlab.com**
+    Bucket does not exist, create it? (y/n): y
+    Bucket newsite.knightlab.com was selected with website endpoint newsite.knightlab.com.s3-website-us-east-1.amazonaws.com
+    You can learn more about s3 (like pointing to your own domain) here: https://github.com/koenbok/Cactus
+    Uploading site to bucket newsite.knightlab.com
+
+If this is the first time you are deploying the site, you will also need to set up a DNS CNAME to make the public domain name map to the Amazon S3 bucket.
+
