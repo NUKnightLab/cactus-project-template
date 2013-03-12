@@ -18,6 +18,7 @@ You're now ready. See below for guidance on starting a new site.
 Start a new site
 ----------------
 In a terminal:
+
     workon cactussites
     cd ~/src (or whereever you keep your git repositories)
     cactus create **newsite.knightlab.com** --skeleton=https://github.com/NUKnightLab/cactus-project-template/archive/master.zip
@@ -36,6 +37,7 @@ First, create the git repository where the site will live.
 * Uncheck "Initialize this repository with a README"
 
 In a terminal:
+
     cd ~/src/newsite.knightlab.com
     git add *
     git commit -m "initial"
