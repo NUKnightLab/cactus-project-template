@@ -5,12 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="shortcut icon" href="{{ STATIC_URL }}/favicon.ico"> 
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css">
-
 	{% block header %}
 	<title>Welcome</title>
 	{% endblock %}
+
+	<link rel="shortcut icon" href="{{ STATIC_URL }}/favicon.ico"> 
+	<link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css">
+
+	<!--[if lt IE 9]>
+	<script src="{{ STATIC_URL }}/js/html5shiv.js"></script>
+	<![endif]-->
 
 </head>
 <body>
