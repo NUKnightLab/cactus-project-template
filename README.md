@@ -5,12 +5,12 @@ Basis for creating new Knight Lab-themed documentation or static sites. To use:
 
 Install Cactus
 --------------
-If you haven't, create a virtual environment for doing cactus projects. While we don't have a lot of experience, it seems you could get away with a single environment for all cactus-based sites.
+If you haven't, create a virtual environment for doing cactus projects. While we don't have a lot of experience, it seems you could get away with a single environment for all cactus-based sites. 
 
-For now, the core Cactus project hasn't accepted the pull request which supports starting a new cactus project from an alternative source, so you have to plug in Joe's fork.
+NOTE: the changes which allow Cactus to use KnightLab-specific templates have not yet been merged into the original Cactus project, so you must use the special pip install command below.
 
     mkvirtualenv cactussites
-    pip install -e git://github.com/JoeGermuska/Cactus.git#egg=cactus-jlg
+    pip install -e git://github.com/JoeGermuska/Cactus.git@skeleton#egg=cactus
 
 You're now ready. See below for guidance on starting a new site.
 
