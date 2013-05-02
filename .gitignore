@@ -3,3 +3,5 @@
 *.pyc
 local_settings.py
 /.build
+# for regular cactus projects more than this one...
+config.json
