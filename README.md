@@ -39,7 +39,8 @@ First, create the git repository where the site will live.
 In a terminal:
 
     cd ~/src/newsite.knightlab.com
-    git add *
+    git init
+    git add .
     git commit -m "initial"
     git remote add origin git@github.com:NUKnightLab/**newsite.knightlab.com**.git
     git push -u origin master
