@@ -65,3 +65,22 @@ Cactus makes this dead simple. The first time you do it, it will ask for the Ama
 
 If this is the first time you are deploying the site, you will also need to set up a DNS CNAME to make the public domain name map to the Amazon S3 bucket.
 
+Notes on installing virtualenv
+------------------------------
+These are for Macintosh/Linux. Feel free to submit a pull-request with notes for Windows
+
+If you don't have `easy_install` installed, then do that. If you do have `pip` installed, skip the first line.
+    easy_install pip
+    pip install virtualenv
+    pip install virtualenvwrapper
+
+Create or edit ~/.profile (~ means your home directory)
+add these lines. If you keep git repositories in a specific place, you may want to change PROJECT_HOME to point to that, but don't worry too much about it.
+
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/src
+    source /usr/local/bin/virtualenvwrapper.sh
+
+Open a new terminal to activate the virtual environment
+
+Note: `virtualenvwrapper.sh` sometimes gets installed in a different path. If it did, you'll get an error when you open a new terminal. Ask for help finding your virtualenvwrapper.sh 
