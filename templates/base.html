@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Blueline Example: Static Page</title>
+  <title>{% block title %}Blueline Template{% endblock %}</title>
   <!-- Optional: Knight Lab webfonts -->
   <link href="//cloud.webtype.com/css/d4767ecb-457a-4677-8761-72f890add836.css" rel="stylesheet" type="text/css">
   <!-- Note: You must include the Blueline CDN stylesheet -->
@@ -27,6 +27,7 @@
   })();
   </script>
   {# End Google Analytics #}
+  {% block extrahead %}{% endblock %}
 </head>
 <body>
 
@@ -147,5 +148,6 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="//cdn.knightlab.com/libs/blueline/latest/js/blueline.min.js"></script>
+  {% block extrascripts %}{% endblock %}
 </body>
 </html>
